@@ -1,12 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  height: 100vh;
-
-  color: #555555;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
+  color: #333333;
 }
 .clr {
   clear: left;
@@ -14,20 +16,22 @@ body {
 a {
   text-decoration: none;
 }
-
-/* ------------------------------------------------- */
+/* ----------------------------------------- */
 
 .nav-bar {
   top: 0;
   width: 100%;
   padding: 10px 0;
-  position: absolute;
+  position: fixed;
+  background-color: #333333;
+  z-index: 1;
 }
 
 .logo-parent {
   width: 23%;
   height: 100%;
 
+  margin-top: 10px;
   display: flex;
   justify-content: flex-end;
 
@@ -52,7 +56,7 @@ a {
   top: 0;
 }
 .list li {
-  padding-right: 15px;
+  padding-right: 20px;
   list-style: none;
   float: left;
 }
@@ -61,10 +65,10 @@ a {
   font-weight: 300;
 }
 
-/* ------------------------------------ */
+/* ------------------------------------------------- */
 
 .background {
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   background-image: url(../images/Fokir05.jpeg);
 
@@ -72,8 +76,8 @@ a {
   background-position: center center;
   background-blend-mode: overlay;
 }
-/* ----------------------------------------- */
 
+/* ------------------------------------ */
 .center-titles {
   top: 40%;
   width: 100%;
@@ -114,7 +118,7 @@ a {
   width: 100%;
   padding: 100px 0 125px;
   display: flex;
-  justify-content: center; /* horizontal  ----------- */ /*Flex rOW, FLEX-COLUMN: */
+  justify-content: center;
 }
 
 .about .container {
@@ -135,6 +139,41 @@ a {
 .about-border-box {
   position: absolute;
   transform: translateX(24px) translateY(24px);
+}
+.image-container {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  line-height: 0;
+}
+.black-layer {
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: top 0.5s;
+}
+.image-container:hover .black-layer {
+  top: 0;
+}
+
+.black-layer .icons {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black-layer a {
+  padding-right: 15px;
+  color: white;
+  transition: color 0.5s;
+}
+.black-layer a:hover {
+  color: #ff2b5e;
 }
 
 .content-container {
@@ -175,10 +214,172 @@ a {
   display: table;
 }
 .profile-about li {
+  padding-bottom: 15px;
   display: inline-block;
-  width: 49%;
+  width: 50%;
 }
 
 .profile-about span {
   font-weight: bold;
+}
+
+.profile-about a {
+  color: #7e7e7e;
+}
+/* --------------------------- */
+
+.cv-btn a {
+  margin-right: 10px;
+  padding: 10px 24px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ff305b;
+  transition: background-color 0.3s ease-in-out;
+}
+.cv-btn i {
+  padding-left: 10px;
+}
+.cv-btn a:hover {
+  background-color: #ec2403;
+}
+
+/* --------------------------- */
+
+.service-section {
+  margin: 0 auto;
+  padding: 80px 0 34px;
+  background-color: #f1f1f1;
+}
+.title-lines {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 48px;
+}
+.title-lines h2::before {
+  content: "";
+
+  border-color: #ec2403;
+  border-width: 1px 0;
+  border-style: solid;
+
+  width: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 5px 0 5px;
+  position: absolute;
+}
+.title-lines h2::after {
+  content: "";
+  background-color: #ff305b;
+
+  width: 200px;
+  height: 1px;
+  margin: 0 auto;
+
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  position: absolute;
+}
+.service-section .informations {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inner-service {
+  padding-top: 48px;
+  transition: background-color 0.7s, box-shadow 0.7s, scale 0.1s;
+}
+.inner-service:hover {
+  background-color: white;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+.inner-service i {
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  transition: all 0.3s ease-in-out 0s;
+}
+.inner-service:hover i {
+  transform: scale(1.2);
+}
+/* ------------------------------- */
+
+.portfolio {
+  padding: 80px;
+}
+.portfolio .slider {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .slider a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: #333333;
+}
+.portfolio .slider li {
+  list-style: none;
+  padding-right: 20px;
+  float: left;
+}
+
+.portfolio ul li a {
+  transition: transform 0.3s ease-in-out, color 0.2s ease-in-out;
+}
+.portfolio ul li a:hover {
+  transform: scale(1.1);
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.portfolio-grid {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+  line-height: 0;
+}
+.portfolio-item {
+  width: 25%;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item .image {
+  background-color: #555555;
+}
+.portfolio-item img {
+  width: 100%;
+}
+.portfolio-item .portfolio-item-layer {
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  position: absolute;
+  transition: background-color 0.5s;
+}
+
+.portfolio-item .portfolio-item-layer:hover {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.portfolio-item .portfolio-item-layer:hover i {
+  opacity: 1;
+}
+
+.portfolio-item .portfolio-item-layer i {
+  color: #ff003c;
+  right: 20px;
+  bottom: 15px;
+  position: absolute;
+  opacity: 0;
 }

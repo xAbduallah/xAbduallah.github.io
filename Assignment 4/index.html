@@ -12,12 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.engage.veented.com/bakery/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.4.2"
+      type="text/css"
+      media="all"
+    />
 
-		<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="background"></div>
     <div class="nav-bar">
       <div class="logo-parent">
         <div class="left-logo">
@@ -27,17 +36,19 @@
 
       <div class="list">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">Testimonial</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
           <div class="clr"></div>
         </ul>
       </div>
     </div>
+
+    <div id="home" class="background"></div>
 
     <div class="center-titles">
       <div class="titles">
@@ -47,11 +58,21 @@
       </div>
     </div>
 
-    <div class="about">
+    <div id="about" class="about">
       <div class="container">
         <div class="all-about">
           <div class="about-border-box">
-            <img src="images/Fokir06.jpg" alt="" />
+            <div class="image-container">
+              <img src="images/Fokir06.jpg" alt="personal-img" />
+              <div class="black-layer">
+                <div class="icons">
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-google"></i></a>
+                  <a href=""><i class="fa fa-github"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -78,8 +99,136 @@
                 <li><span>E-mail:</span> <a href="#">example@gmail.com</a></li>
               </ul>
             </div>
+
+            <div class="cv-btn">
+              <a href="#about">Download CV<i class="fa fa-download"></i></a>
+              <a href="#about">Hire Me<i class="fa fa-paper-plane"></i></a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="service" class="service-section">
+      <div class="title-lines">
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="informations">
+        <div class="inner-service">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>UI/UX DESIGN</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+            adipisci mollitia quis necstatibus.
+          </p>
+        </div>
+
+        <div class="inner-service">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>APP DEVELOPMENT</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+            adipisci mollitia quis necstatibus.
+          </p>
+        </div>
+
+        <div class="inner-service">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>PRODUCT DESIGN</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+            adipisci mollitia quis necstatibus.
+          </p>
+        </div>
+
+        <div class="inner-service">
+          <i class="fa-solid fa-gears"></i>
+          <h3>UI/UX DESIGN</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+            adipisci mollitia quis necstatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio" class="portfolio">
+      <div class="title-lines">
+        <h2>Our Portfolio</h2>
+      </div>
+
+      <div class="slider">
+        <ul>
+          <li><a style="color: red" href="#portfolio">All</a></li>
+          <li><a href="#portfolio">Graphic</a></li>
+          <li><a href="#portfolio">Design</a></li>
+          <li><a href="#portfolio">Branding</a></li>
+          <div class="clr"></div>
+        </ul>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir07.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir08.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir09.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="clr"></div>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir10.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir11.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio-item">
+          <a href="#portfolio">
+            <img src="images/Fokir12.jpg" alt="portfolio-img" />
+            <div class="portfolio-item-layer">
+              <i class="fa-regular fa-images"></i>
+            </div>
+          </a>
+      </div>
+
+        <div class="clr"></div>
       </div>
     </div>
   </body>
