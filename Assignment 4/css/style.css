@@ -4,7 +4,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -24,7 +24,7 @@ a {
   padding: 10px 0;
   position: fixed;
   background-color: #333333;
-  z-index: 1;
+  z-index: 99999;
 }
 
 .logo-parent {
@@ -257,6 +257,7 @@ a {
   justify-content: center;
   position: relative;
   margin-bottom: 48px;
+  width: 100%;
 }
 .title-lines h2::before {
   content: "";
@@ -295,7 +296,8 @@ a {
 }
 
 .inner-service {
-  padding-top: 48px;
+  width: 25%;
+  padding: 48px 15px 0;
   transition: background-color 0.7s, box-shadow 0.7s, scale 0.1s;
 }
 .inner-service:hover {
@@ -341,17 +343,14 @@ a {
 }
 
 .portfolio-grid {
-  width: 80%;
   display: flex;
   justify-content: center;
-  padding: 0 100px;
   line-height: 0;
 }
 .portfolio-item {
-  width: 25%;
+  width: 20%;
   margin: 20px;
   position: relative;
-  overflow: hidden;
 }
 
 .portfolio-item .image {
@@ -382,4 +381,108 @@ a {
   bottom: 15px;
   position: absolute;
   opacity: 0;
+}
+/* ------------------------------- */
+
+.counters {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #f1f1f1;
+}
+
+.counters .content {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.counter-item {
+  width: 25%;
+  padding: 0 15px;
+  text-align: center;
+}
+.counter-item i {
+  font-size: 26px;
+  color: #ff2b5e;
+}
+.counter-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.counter-item h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ------------------------------- */
+.feedback {
+  height: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback .clients-card {
+  display: flex;
+  width: 40%;
+  height: auto;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.feedback .clients-card .left-corner {
+  height: 100%;
+  /* border-radius: 5px;
+  background-color: #333333; */
+}
+.feedback .clients-card .corner-triangle {
+  border-radius: 5px;
+  border-right: 210px solid transparent;
+  border-top: 200px solid #ff2b5e;
+}
+
+.feedback .clients-card .card {
+  padding: 40px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.feedback .clients-card .content {
+  padding-bottom: 30px;
+}
+
+.feedback .clients-card .content h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.feedback .clients-card .content a {
+  font-size: 15px;
+  color: #777777;
+}
+.feedback .clients-card .content p {
+  font-style: italic;
+}
+.feedback .clients-card .content .stars i {
+  color: #f1c30d;
+}
+
+.feedback .slider-dots {
+  margin-top: 10px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 5px solid #ff2b5e;
+}
+/* ------------------------------- */
+
+.our-blog
+{
+  padding: 100px 0;
+  background-color: #F1F1F1;
+}
+.our-blog .posts
+{
+  display: flex;
+  justify-content: center;
 }
