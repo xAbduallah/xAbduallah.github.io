@@ -116,17 +116,17 @@ a {
 
 .about {
   padding: 80px 0;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
 }
 
 .new-container {
-  width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 .about .new-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about .all-about {
@@ -150,7 +150,7 @@ a {
   line-height: 0;
 }
 .black-layer {
-  top: 100%;
+  top: 110%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -180,7 +180,6 @@ a {
 
 .content-container {
   width: 700px;
-  height: 500px;
   padding-left: 15px;
 }
 
@@ -287,16 +286,19 @@ a {
 .service-section {
   padding: 80px 0;
   background-color: #f1f1f1;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
 }
 .service-section .informations {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 
 .inner-service {
-  width: 50%;
-  padding: 48px 15px 0;
+  width: 20%;
+  padding: 15px;
+  border-radius: 5px;
   transition: background-color 0.7s, box-shadow 0.7s, scale 0.1s;
 }
 .inner-service:hover {
@@ -304,6 +306,7 @@ a {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 }
 .inner-service i {
+  padding-top: 15px;
   font-size: 30px;
   font-weight: bold;
   color: red;
@@ -316,6 +319,7 @@ a {
 
 .portfolio {
   padding: 80px 0;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
 }
 .portfolio .slider {
   display: flex;
@@ -342,11 +346,16 @@ a {
 }
 
 .portfolio-grid {
+  width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   line-height: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .portfolio-item {
+  width: 25%;
   margin: 20px;
   position: relative;
 }
@@ -385,16 +394,18 @@ a {
 .counters {
   padding: 80px 0;
   background-color: #f1f1f1;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
 }
 
 .counters .content {
   display: flex;
-  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .counter-item {
-  width: 25%;
-  padding: 0 15px;
+  width: 20%;
+  padding: 15px;
   text-align: center;
 }
 .counter-item i {
@@ -414,16 +425,25 @@ a {
 /* ------------------------------- */
 .feedback {
   padding: 100px 0 70px;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
 }
 
 .feedback .clients-card {
+  width: 45%;
   display: flex;
-  margin: 0 16%;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #f1f1f1;
   border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding: 0 20px 20px 0;
 }
-.feedback .clients-card .left-corner {
-  height: 100%;
+.feedback .clients-card .left-side {
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 .feedback .clients-card .corner-triangle {
   border-radius: 5px;
@@ -436,14 +456,16 @@ a {
   border-left-color: #ec2403;
 }
 
-.feedback .clients-card .card {
+.feedback .left-side .card {
   padding: 40px;
   border-radius: 50%;
   position: absolute;
+  top: 0;
 }
 
 .feedback .clients-card .content {
-  padding: 0 30px 30px;
+  width: 70%;
+  margin-left: auto;
 }
 
 .feedback .clients-card .content h3 {
@@ -477,15 +499,20 @@ a {
   background-color: #f1f1f1;
 }
 .our-blog .posts {
+  width: 70%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .our-blog .posts .post {
-  width: 33.33%;
+  width: 31%;
   margin-right: 25px;
 }
 .our-blog .posts .post .post-bg {
   background-color: white;
+  height: 100%;
 }
 
 .posts .post-img img {
@@ -515,26 +542,159 @@ a {
   color: #ff2b5e;
 }
 
+/* ----------Dark Mode--------- */
+body {
+  color: white;
+  background-color: #212121;
+}
+.nav-bar {
+  background-color: #212121;
+}
+.service-section {
+  background-color: #3c3d3761;
+}
+.inner-service:hover {
+  background-color: #1a1a1a;
+}
+.counters {
+  background-color: #3c3d3761;
+}
+.feedback .clients-card {
+  background-color: #3c3d3761;
+}
+.our-blog {
+  background-color: #3c3d3761;
+}
+.our-blog .posts .post .post-bg {
+  background-color: #212121;
+}
+.portfolio .slider a {
+  color: white;
+}
+.inner-service:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+.posts .post-content a {
+  color: #ffffff;
+}
 /* --------------------------- */
 
 /* Extra small */
-@media screen and (max-width: 600px) {
-  .inner-service {
+@media (max-width: 575.98px) {
+  .service-section .informations .inner-service {
+    width: 70%;
+  }
+  .content-container {
+    padding-top: 50px;
     width: 100%;
   }
-}
-/* Small devices */
-@media only screen and (min-width: 600px) {
+  .portfolio-item {
+    width: 100%;
+  }
+  .counter-item {
+    width: 100%;
+  }
+  .feedback .clients-card {
+    padding-top: 200px;
+  }
+  .feedback .clients-card .content{
+    margin: 0;
+  }
+  .our-blog .posts{
+    width: 100%;
+  }
+  .our-blog .posts .post {
+    width: 100%;
+    padding-bottom: 30px;
+  }
 }
 
-/* Medium devices */
-@media only screen and (min-width: 768px) {
+/* Small */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .service-section .informations .inner-service {
+    width: 60%;
+  }
+  .content-container {
+    padding-top: 50px;
+    width: 100%;
+  }
+  .portfolio-item {
+    width: 90%;
+  }
+  .counter-item {
+    width: 80%;
+  }
+  .feedback .clients-card {
+    padding-top: 200px;
+  }
+  .feedback .clients-card .content{
+    margin: 0;
+  }
+  .our-blog .posts{
+    width: 100%;
+  }
+  .our-blog .posts .post {
+    width: 45%;
+    padding-bottom: 30px;
+  }
+
 }
 
-/* Large devices */
-@media only screen and (min-width: 992px) {
+/* Medium */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .service-section .informations .inner-service {
+    width: 45%;
+  }
+  .content-container {
+    padding-top: 50px;
+    width: 70%;
+  }
+  .portfolio-item {
+    width: 70%;
+  }
+  .counter-item {
+    width: 40%;
+  }
+  .feedback .clients-card {
+    width: 90%;
+  }
+  .our-blog .posts{
+    width: 100%;
+  }
+  .our-blog .posts .post {
+    width: 30%;
+  }
 }
 
-/* Extra large devices */
-@media only screen and (min-width: 1200px) {
+/* Large */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .service-section .informations .inner-service {
+    width: 30%;
+  }
+  .content-container {
+    padding-top: 50px;
+    width: 60%;
+  }
+  .portfolio-item {
+    width: 45%;
+  }
+  .counter-item {
+    width: 30%;
+  }
+  .feedback .clients-card {
+    width: 65%;
+  }
+  .our-blog .posts{
+    width: 100%;
+  }
+  .our-blog .posts .post {
+    width: 30%;
+  }
+}
+
+/* Extra large */
+@media (min-width: 1200px) {
+  .service-section .informations .inner-service {
+    width: 20%;
+  }
 }
