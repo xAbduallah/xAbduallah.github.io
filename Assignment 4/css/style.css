@@ -28,16 +28,10 @@ a {
 }
 
 .logo-parent {
-  width: 23%;
-  height: 100%;
-
+  margin-left: 10%;
   margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-
-  align-items: center;
-
-  position: relative;
+  /* width: 23%;
+  justify-content: flex-end; */
 }
 .left-logo a {
   padding: 18px 0;
@@ -47,12 +41,11 @@ a {
 }
 /* ------------------------------------------------------- */
 .list {
-  height: 100%;
   position: absolute;
 
   display: flex;
   align-items: center;
-  right: 20%;
+  right: 10%;
   top: 0;
 }
 .list li {
@@ -63,6 +56,13 @@ a {
 .list a {
   color: white;
   font-weight: 300;
+  transition: all 0.3s ease-in-out 0s;
+  display: inline-block;
+
+}
+.list a:hover{
+  color: #ff2b5e;
+  transform: scale(1.1);
 }
 
 /* ------------------------------------------------- */
@@ -548,7 +548,9 @@ body {
   background-color: #212121;
 }
 .nav-bar {
-  background-color: #212121;
+  /* background-color: #484848; */
+  background: linear-gradient(to right, rgb(25, 0, 0), rgb(50, 0, 0), rgb(25, 0, 0));
+
 }
 .service-section {
   background-color: #3c3d3761;
