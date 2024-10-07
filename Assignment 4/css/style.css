@@ -30,8 +30,6 @@ a {
 .logo-parent {
   margin-left: 10%;
   margin-top: 10px;
-  /* width: 23%;
-  justify-content: flex-end; */
 }
 .left-logo a {
   padding: 18px 0;
@@ -58,9 +56,8 @@ a {
   font-weight: 300;
   transition: all 0.3s ease-in-out 0s;
   display: inline-block;
-
 }
-.list a:hover{
+.list a:hover {
   color: #ff2b5e;
   transform: scale(1.1);
 }
@@ -107,9 +104,34 @@ a {
   font-family: "Source Sans Pro", sans-serif;
 }
 .titles h4 {
+  display: inline-block;
   color: white;
   font-size: 26px;
   font-weight: 300;
+}
+
+/* The best I can do */
+.typewriter::before {
+  content: "";
+  animation: typing 5s infinite;
+}
+
+@keyframes typing {
+  0%, 20% { content: ""; }
+  21%, 25% { content: "D"; }
+  26%, 30% { content: "De"; }
+  31%, 35% { content: "Dev"; }
+  36%, 40% { content: "Devel"; }
+  41%, 45% { content: "Develop"; }
+  46%, 60% { content: "Developer"; }
+
+  61%, 70% { content: ""; }
+  71%, 75% { content: "D"; }
+  76%, 80% { content: "De"; }
+  81%, 85% { content: "Des"; }
+  86%, 90% { content: "Desi"; }
+  91%, 95% { content: "Design"; }
+  96%, 100% { content: "Designer"; }
 }
 
 /* -------------------------------------------- */
@@ -122,6 +144,7 @@ a {
 .new-container {
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 .about .new-container {
   display: flex;
@@ -499,7 +522,7 @@ a {
   background-color: #f1f1f1;
 }
 .our-blog .posts {
-  width: 70%;
+  width: 91%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -508,7 +531,7 @@ a {
 }
 .our-blog .posts .post {
   width: 31%;
-  margin-right: 25px;
+  margin: 0 12.5px 25px;
 }
 .our-blog .posts .post .post-bg {
   background-color: white;
@@ -517,10 +540,11 @@ a {
 
 .posts .post-img img {
   width: 100%;
+  height: 300px;
 }
 .posts .post-img iframe {
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
 
 .posts .post-content {
@@ -549,8 +573,12 @@ body {
 }
 .nav-bar {
   /* background-color: #484848; */
-  background: linear-gradient(to right, rgb(25, 0, 0), rgb(50, 0, 0), rgb(25, 0, 0));
-
+  background: linear-gradient(
+    to right,
+    rgb(25, 0, 0),
+    rgb(50, 0, 0),
+    rgb(25, 0, 0)
+  );
 }
 .service-section {
   background-color: #3c3d3761;
@@ -580,6 +608,61 @@ body {
   color: #ffffff;
 }
 /* --------------------------- */
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(107, 107, 107, 0.25);
+}
+.contact-us form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-us form input {
+  width: 40%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  height: 30px;
+}
+.contact-us form input[name="subject"] {
+  width: 82.5%;
+}
+textarea {
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 82.5%;
+  height: 100px;
+  resize: both;
+}
+.contact-us form .send-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 25%;
+  height: 50px;
+  color: white;
+  background-color: #ff2b5e;
+}
+/* --------------------------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.footer .icons {
+  padding-top: 50px;
+}
+.footer .icons i {
+  padding-right: 25px;
+  color: white;
+}
+.footer p a {
+  color: #ff2b5e;
+}
+/* --------------------------- */
 
 /* Extra small */
 @media (max-width: 575.98px) {
@@ -599,10 +682,10 @@ body {
   .feedback .clients-card {
     padding-top: 200px;
   }
-  .feedback .clients-card .content{
+  .feedback .clients-card .content {
     margin: 0;
   }
-  .our-blog .posts{
+  .our-blog .posts {
     width: 100%;
   }
   .our-blog .posts .post {
@@ -629,17 +712,16 @@ body {
   .feedback .clients-card {
     padding-top: 200px;
   }
-  .feedback .clients-card .content{
+  .feedback .clients-card .content {
     margin: 0;
   }
-  .our-blog .posts{
+  .our-blog .posts {
     width: 100%;
   }
   .our-blog .posts .post {
-    width: 45%;
+    width: 70%;
     padding-bottom: 30px;
   }
-
 }
 
 /* Medium */
@@ -660,11 +742,17 @@ body {
   .feedback .clients-card {
     width: 90%;
   }
-  .our-blog .posts{
+  .our-blog .posts {
     width: 100%;
   }
   .our-blog .posts .post {
     width: 30%;
+  }
+  .posts .post-img img {
+    height: 200px;
+  }
+  .posts .post-img iframe {
+    height: 200px;
   }
 }
 
@@ -686,17 +774,20 @@ body {
   .feedback .clients-card {
     width: 65%;
   }
-  .our-blog .posts{
+  .our-blog .posts {
     width: 100%;
   }
   .our-blog .posts .post {
     width: 30%;
   }
+  .posts .post-img img {
+    height: 250px;
+  }
+  .posts .post-img iframe {
+    height: 250px;
+  }
 }
 
 /* Extra large */
 @media (min-width: 1200px) {
-  .service-section .informations .inner-service {
-    width: 20%;
-  }
 }
