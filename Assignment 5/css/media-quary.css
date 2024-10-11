@@ -1,0 +1,69 @@
+
+/* screen  width > 87.5rem */
+@media screen and (min-width: 1400px) {
+    .container {
+      width: 1320px;
+    }
+  }
+  
+  /* screen  width < 87.5rem */
+  @media screen and (max-width: 1400px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+  
+    .home .container {
+      flex-direction: column-reverse;
+    }
+  
+    .home .left-side {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    .home .right-side {
+      width: 100%;
+    }
+  
+    .chefs .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .chefs .cards .single-card {
+      width: 48%;
+    }
+
+    .gallery .container .gallerys {
+      height: 1405px;
+    }
+    .gallery .container .gallerys .image {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 540px;
+    }
+    .gallery .container .gallerys {
+      height: auto;
+    }
+    .gallery .container .gallerys .image {
+      width: 100%;
+    }
+  }
