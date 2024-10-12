@@ -294,6 +294,7 @@ body:has(.contact:target) .nav-list ul li a[href="#contact"]::before {
   overflow: hidden;
   transition: all var(--transition-delay);
   box-shadow: 0 0.3125rem 0.625rem var(--shadow-color);
+  position: relative;
 }
 .chefs .cards .single-card img {
   border-radius: 1rem;

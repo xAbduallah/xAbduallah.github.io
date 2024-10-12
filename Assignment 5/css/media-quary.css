@@ -70,6 +70,9 @@
   input[id="email"] {
     width: calc(100% - 0.625rem);
   }
+  .contact .message form input[type="submit"] {
+    width: 50%;
+  }
   footer .container {
     flex-wrap: wrap;
   }
