@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6439FF, #4F75FF, #00CCDD,#7CF5FF);
+    color: #fff;
+}
+
+.blur-bg {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+#quote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.title-text {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #f0f0f0;
+}
+
+#author {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Custom Button */
+.btn-custom {
+    background: #4F75FF;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+    background: #6439FF;
+    transform: translateY(-2px);
+}
+
+.btn-custom:active {
+    background: #4F75FF;
+    transform: translateY(0);
+}
