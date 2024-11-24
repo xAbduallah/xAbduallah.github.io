@@ -1,0 +1,121 @@
+body,
+html {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #001f3f, #003566, #004a85, #005b99, #006fae);
+  color: #fff;
+  height: 100vh;
+  box-sizing:border-box;
+}
+
+.container {
+  height: 100vh;
+}
+
+.mirror-text {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.317), 0 0 30px rgba(255, 255, 255, 0.232);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.mainForum {
+  height: 250px;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.mainForum::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3498db33, #3498db, #3498db33);
+}
+.mainForum::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3498db33, #3498db, #3498db33);
+}
+
+.mainForum p {
+  color: #3498db;
+}
+.mainForum p i {
+  color: #adb5bd;
+}
+
+.modern-input {
+  width: 100%;
+  border: 3px solid #3498db41;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: #0099ff;
+}
+
+.modern-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.modern-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #3498db41, #2575fc);
+}
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #2575fc, #3498db41);
+}
+.modern-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table .modern-button {
+  background: linear-gradient(45deg, #db343489, #fc2525);
+}
+table .modern-button:hover {
+  background: linear-gradient(45deg, #fc2525, #db343489);
+}
+th, td {
+  color: #000;
+  text-align: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  border: none;
+  color: #000;
+  background-color: #0072AB;
+}
+tr:hover {
+  background-color: #007cce23;
+}
