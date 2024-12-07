@@ -29,10 +29,11 @@ function displayWeather(data) {
 
     for (var i = 0; i < forecasts.length; i++) {
         var forecast = forecasts[i];
+        var dayName = i === 0 ? 'Today' : new Date(forecast.date).toLocaleDateString('en-US', { weekday: 'long' });
         var weatherCard = `
         <div class="col-md-4">
         <div class="weather-card p-4 text-center">
-        <div class="weather-header">${i === 0 ? 'Today' : forecast.date}</div>
+        <div class="weather-header">${dayName}</div>
         <img src="https:${forecast.day.condition.icon}" class="weather-icon my-3" alt="${forecast.day.condition.text}">
         <h3>${data.location.name}</h3>
         <h4>${forecast.day.avgtemp_c}°C</h4>
